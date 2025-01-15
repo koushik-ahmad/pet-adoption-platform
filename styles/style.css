@@ -1,3 +1,9 @@
  .font-lato {
      font-family: "Lato", sans-serif;
  }
+
+ .active {
+     border: 2px solid #0E7A81;
+     border-radius: 120px !important;
+     background-color: #0E7A8120;
+ }
