@@ -108,6 +108,46 @@ const displayDetails = (petDetails) => {
     `;
 };
 
+// Display Adoption Modal When Adopt Button Clicked
+const displayAdoptModal = (petAdopt, petId) => {
+  const adoptContainer = document.getElementById("adopt-modal-content");
+  // Show The Adoption Modal
+  document.getElementById("adoptModal").showModal();
+
+  // Inner Content of Adopt Modal Container
+  adoptContainer.innerHTML = `
+    <div id="adopt-popup" class="bg-white rounded-lg flex flex-col justify-center items-center gap-2">
+        <img class="font-extrabold" width="80" height="80" src="https://img.icons8.com/?size=48&id=q6BlPrJZmxHV&format=png" alt="">
+        <h2 class="text-4xl font-extrabold text-primaryTextColor">Congratulation</h2>
+        <p class="text-xl text-primaryTextColor font-bold">Adoption Process is Start For Your Pet</p>         
+        <h2 id="countdownText" class="text-6xl font-black text-black">3</h2>
+    </div>
+    `;
+  // Countdown Timer of Adopt Modal
+  let countdown = 3;
+
+  const adoptButton = document.getElementById(`${petId}`);
+
+  const countdownInterval = setInterval(() => {
+    countdown -= 1;
+    const countdownText = document.getElementById("countdownText");
+    countdownText.textContent = `${countdown}`;
+
+    if (countdown <= 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("adoptModal").close();
+
+      adoptButton.innerText = "Adopted";
+      adoptButton.disabled = true;
+      adoptButton.classList.add("adopted-button");
+    }
+  }, 1000);
+
+  setTimeout(() => {
+    document.getElementById("adoptModal").close();
+  }, 3000);
+};
+
 // Display All Pets by Default
 const displayAllPets = (pets) => {
   const petsCardContainer = document.getElementById("pets-cards-container");
@@ -180,6 +220,19 @@ const displayAllPets = (pets) => {
     // Pet Cards add to the container
     petsCardContainer.append(card);
   });
+};
+
+// Display Pet Image When Like Button Clicked
+const displayLikedPetImage = (url) => {
+  const likedPetContainer = document.getElementById("liked-pet-container");
+  const div = document.createElement("div");
+
+  div.classList = "p-1 border-2 border-solid rounded-lg";
+  div.innerHTML = `
+     <img class="rounded-lg overflow-hidden h-full w-full" src="${url}" alt="">
+    `;
+  // Add Images to Container
+  likedPetContainer.appendChild(div);
 };
 
 // Display Pet Categories
