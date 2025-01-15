@@ -151,7 +151,7 @@
                                 by Price</button>
                         </div>
                     </div>
-                    <!-- Best Deal For You -->
+                    <!-- Best Deal For You end  -->
                     <!-- Pets Cards Section end -->
                     <section id="card-datas" class="container mx-auto grid  grid-cols-1 lg:grid-cols-4 lg:gap-4">
                         <div id="pets-cards-container"
@@ -169,6 +169,25 @@
             </div>
         </section>
         <!-- Best Friend Section End Here -->
+
+        <!-- Details Modal Starts Here -->
+        <button class="btn hidden" onclick="detailsModal.showModal()">open modal</button>
+        <dialog id="detailsModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-content">
+
+                </div>
+                <div class="pt-4 w-full">
+                    <form method="dialog">
+                        <div class="flex justify-center items-center text-center">
+                            <button
+                                class="btn btn-wide border-2 solid border-secondaryColor font-bold text-xl bg-userBorderColor w-full text-secondaryColor rounded-lg hover:bg-secondaryColor hover:text-primaryColor">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- Details Modal Ends Here -->
     </main>
 
     <!-- Footer Section start here -->

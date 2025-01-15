@@ -46,6 +46,68 @@ const loadCategoryPets = (category) => {
   }, 2000);
 };
 
+// 4. Fetch Pets Data for Details modal
+const loadDetails = (petId) => {
+  fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`)
+    .then((response) => response.json())
+    .then((data) => displayDetails(data.petData))
+    .catch((error) => console.log(error));
+};
+
+// Display Pet Details When Button Clicked
+const displayDetails = (petDetails) => {
+  const detailsContainer = document.getElementById("modal-content");
+  // Show The Details Modal
+  document.getElementById("detailsModal").showModal();
+
+  // Inner Content of Details Modal Container
+  detailsContainer.innerHTML = `
+    <div class="bg-primaryColor rounded-lg">
+        <img class="rounded-lg w-full" src="${
+          petDetails.image
+        }" alt="Pet Image">
+        <div class="mt-4">
+            <h2 class="text-xl font-extrabold mb-3 text-primaryTextColor">${
+              petDetails.pet_name
+            }</h2>
+            <div class="flex justify-between mb-3">
+                <div>
+                    <p class="flex gap-2 font-bold text-tertiaryTextColor mb-1"><img width="24" height="24" src="https://img.icons8.com/?size=24&id=115909&format=png" alt="bulldog">Breed: ${
+                      petDetails?.breed ? petDetails?.breed : "Breed is N/A"
+                    }</p>
+                
+                    <p class="flex gap-2 font-bold text-tertiaryTextColor mb-1"><img width="24" height="24" src="https://img.icons8.com/?size=32&id=16271&format=png" alt="gender">Gender: ${
+                      petDetails?.gender ? petDetails?.gender : "Gender is N/A"
+                    }</p>
+                
+                    <p class="flex gap-2 font-bold text-tertiaryTextColor mb-1"><img width="24" height="24" src="https://img.icons8.com/?size=80&id=bHp2i5MxY171&format=png" alt="external-vaccination-reopening">Vaccinated status: ${
+                      petDetails?.vaccinated_status
+                        ? petDetails?.vaccinated_status
+                        : "Vaccinated status is N/A"
+                    }
+                    </p>
+                </div>
+                <div class="">
+                    <p class="flex gap-2 font-bold text-tertiaryTextColor mb-1"><img width="24" height="24" src="https://img.icons8.com/?size=32&id=16152&format=png" alt="birth-date">Birth: ${
+                      petDetails?.date_of_birth
+                        ? petDetails?.date_of_birth
+                        : "Birth is N/A"
+                    }</p>
+                    <p class="flex gap-2 font-bold text-tertiaryTextColor mb-3"><img width="22" height="22" src="https://img.icons8.com/?size=24&id=85843&format=png" alt="average-2">Price: ${
+                      petDetails?.price ? petDetails?.price : "Price is N/A"
+                    }</p>
+                </div>
+            </div>                              
+            <hr>              
+            <h2 class="font-extrabold mt-3">Details Information</h2>
+            <p class="flex gap-1 font-bold text-tertiaryTextColor mt-2">${
+              petDetails.pet_details
+            }</p>
+        </div>
+    </div>
+    `;
+};
+
 // Display All Pets by Default
 const displayAllPets = (pets) => {
   const petsCardContainer = document.getElementById("pets-cards-container");
