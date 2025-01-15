@@ -29,6 +29,11 @@
                         'secondaryColor': '#0E7A81',
                         'primaryTextColor': '#131313',
                         'secondaryTextColor': '#13131360',
+                        'textColor': '#13131370',
+                        'borderColor': '#0E7A8120',
+                        'inputColor': '#FFFFFF05',
+                        'infoColor': '#FFFFFF90',
+                        'menuColor': '#FFFFFF60',
                     }
                 }
             }
@@ -117,7 +122,116 @@
         <!-- Hero Section end -->
     </header>
     <!-- header section end  -->
+    <main>
+        <!-- Best Friend Section -->
+        <section id="best-freind" class="adopt-container pt-4 mb-8">
+            <div class="container w-11/12 mx-auto">
+                <div class="adopt-content">
+                    <div class="adopt-title lg:w-3/4 mx-auto flex flex-col justify-center items-center">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-primaryTextColor text-center lg:mb-6 mb-4">
+                            Adopt
+                            Your Best Friend</h2>
+                        <p class="font-semibold lg:w-3/4 text-center text-textColor">Discover our adoptable pets
+                            and
+                            find your furry best friend. Our adoption program helps you to find a friend that fits your
+                            lifestyle perfectly. Start your adoption journey today!</p>
+                    </div>
+                    <!-- Category Buttons Start -->
+                    <div id="categories-btn"
+                        class="mt-12 lg:flex lg:justify-between lg:items-center mb-8 grid grid-cols-2 gap-4">
 
+                    </div>
+                    <!-- Category Buttons End -->
+                    <!-- Best Deal For You start  -->
+                    <div class="lg:px-0 px-4 flex flex-col md:flex-row gap-4 w-full justify-between items-center mb-8">
+                        <p class="font-black text-2xl">Best Deal For you</p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="sortPetsByPrice()" id="sort-by-price"
+                                class="bg-secondaryColor text-primaryColor text-xl px-8 py-4 font-extrabold rounded-xl border-none hover:bg-[#1d3862]">Sort
+                                by Price</button>
+                        </div>
+                    </div>
+                    <!-- Best Deal For You -->
+                    <!-- Pets Cards Section end -->
+                    <section id="card-datas" class="container mx-auto grid  grid-cols-1 lg:grid-cols-4 lg:gap-4">
+                        <div id="pets-cards-container"
+                            class="p-3 border-2 border-solid border-gray-300 rounded-xl col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                        </div>
+                        <div class="p-3 mt-2 lg:mt-0 border-2 border-solid border-gray-300 rounded-xl col-span-1">
+                            <div id="liked-pet-container" class="grid grid-cols-2 gap-2">
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Pets Cards Section End Here -->
+                </div>
+            </div>
+        </section>
+        <!-- Best Friend Section End Here -->
+    </main>
+
+    <!-- Footer Section start here -->
+    <footer id="footer-section" class="w-full bg-primaryTextColor py-6">
+        <section
+            class="container lg:w-11/12 mx-auto py-8 flex lg:justify-between lg:flex-row flex-col gap-12 lg:px-0 px-10">
+            <div class="left-side-content flex flex-col gap-2 items-start">
+                <a class="flex items-center gap-2" href="index.html">
+                    <img src="./images/logo.webp" alt="Logo">
+                    <span class="text-2xl md:text-3xl font-extrabold text-primaryColor">Peddy</span>
+                </a>
+                <div class="info mt-4 flex flex-col gap-2">
+                    <p class="text-sm text-infoColor">Location: av. Washington 165, NY CA 54003</p>
+                    <p class="text-sm text-infoColor">Phone: +31 85 964 47 25</p>
+                    <p class="text-sm text-infoColor">Email: info@yourdomain.com</p>
+                    <p class="text-sm text-infoColor">Openings hours: 9.00 AM - 5.00 PM</p>
+                </div>
+                <div class="icons flex items-center gap-4 mt-2">
+                    <a class="cursor-pointer" href="#"><img class="w-8" src="./images/fb.png" alt=""></a>
+                    <a class="cursor-pointer" href="#"><img class="w-9" src="./images/x.png" alt=""></a>
+                    <a class="cursor-pointer" href="#"><img class="w-10" src="./images/youtube.png" alt=""></a>
+                    <a class="cursor-pointer" href="#"><img class="w-8" src="./images/insta.png" alt=""></a>
+                </div>
+            </div>
+            <div class="middle-content flex flex-col items-start">
+                <h2 class="text-xl font-bold text-primaryColor mb-4">Useful Links</h2>
+                <ul class="flex flex-col gap-2">
+                    <li><a class="text-infoColor">Home</a>
+                    </li>
+                    <li><a class="text-infoColor">About Us</a>
+                    </li>
+                    <li><a class="text-infoColor">Animals</a>
+                    </li>
+                    <li><a class="text-infoColor">Foundation</a>
+                    </li>
+                    <li><a class="text-infoColor">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-2 items-start">
+                <h2 class="text-lg font-bold text-primaryColor mb-4">Drop a Message</h2>
+                <label class="input input-bordered flex items-center gap-2 bg-inputColor w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-4 w-4 text-white">
+                        <path
+                            d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                        <path
+                            d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                    </svg>
+                    <input class="text-primaryColor w-full" type="text" class="grow" placeholder="Enter your email" />
+                </label>
+                <div class="subscribe-btn mt-2 w-full">
+                    <button
+                        class="w-full bg-secondaryColor border-none rounded-lg px-8 py-3 hover:hover:bg-[#2b6295]"><a
+                            class=" text-primaryColor font-extrabold" href="#">Subscribe</a></button>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Footer Section end here -->
+
+    <!-- js file  -->
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
