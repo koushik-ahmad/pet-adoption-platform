@@ -25,7 +25,10 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'primaryColor': '#FFFFFF',
+                        'secondaryColor': '#0E7A81',
+                        'primaryTextColor': '#131313',
+                        'secondaryTextColor': '#13131360',
                     }
                 }
             }
@@ -34,11 +37,52 @@
 </head>
 
 <body class="font-lato">
-    <h1> This is my website </h1>
+    <!-- header section start  -->
+    <header>
+        <!-- Navbar Section start -->
+        <nav class="container w-11/12 mx-auto py-4 lg:py-6">
+            <div class="navbar-content">
+                <div class="navbar flex justify-between items-center mx-auto">
+                    <div class="navbar-start text-left">
+                        <a class="flex items-center gap-2" href="index.html">
+                            <img src="./images/logo.webp" alt="Logo">
+                            <span class="text-2xl md:text-3xl font-extrabold text-primaryTextColor">Peddy</span>
+                        </a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex items-center mt-4">
+                        <ul class="menu-options flex gap-8 font-medium">
+                            <li><a class="text-xl text-primaryTextColor" href="#index.html">Home</a></li>
+                            <li><a class="text-xl text-primaryTextColor" href="#shop-section">Shop</a></li>
+                            <li><a class="text-xl text-primaryTextColor" href="#footer-section">Contact</a>
+                        </ul>
+                    </div>
+                    <div class="navbar-end flex">
+                        <div class="item gap-2 items-center">
+                            <a href="#index.html">
+                                <i
+                                    class="fa-regular fa-user p-3 bg-primaryColor rounded-full border-2 border-solid border-userBorderColor hover:bg-userBorderColor"></i>
+                            </a>
+                        </div>
+                        <div class="dropdown lg:hidden relative ml-2">
+                            <div tabindex="0" role="button"
+                                class="btn p-4 bg-userBorderColor border-2 border-solid rounded-full lg:hidden hover:bg-userBorderColor">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow absolute right-0">
+                                <li><a class="text-xl " href="#index.html">Home</a></li>
+                                <li><a class="text-xl text-primaryTextColor" href="#shop-section">Shop</a></li>
+                                <li><a class="text-xl text-primaryTextColor" href="#footer-section">Contact</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar section end -->
 
-    <button class="btn">Button</button>
-    <button class="btn btn-neutral">Neutral</button>
-    <button class="btn btn-primary">Primary</button>
+    </header>
+    <!-- header section end  -->
 
 </body>
 
