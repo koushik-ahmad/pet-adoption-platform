@@ -1,8 +1,6 @@
 # Peddy - Pet Adoption Platform
 
-### Live Link
-
-### [pet-adoption-platform](https://pet-adoption-platform006.netlify.app/)
+### Live Link: [pet-adoption-platform](https://pet-adoption-platform006.netlify.app/)
 
 ## Project Description
 
