@@ -54,6 +54,17 @@ const loadDetails = (petId) => {
     .catch((error) => console.log(error));
 };
 
+// Sort Pets by Price
+const sortPetsByPrice = () => {
+  // Show The Loading Bar
+  const leftContainer = document.getElementById("pets-cards-container");
+  leftContainer.innerHTML = `<span class="loading loading-bars loading-lg col-span-3 mx-auto w-12"></span>`;
+  setTimeout(() => {
+    currentPets.sort((a, b) => b.price - a.price);
+    displayAllPets(currentPets);
+  }, 2000);
+};
+
 // Display Pet Details When Button Clicked
 const displayDetails = (petDetails) => {
   const detailsContainer = document.getElementById("modal-content");
