@@ -156,12 +156,12 @@ const displayAllPets = (pets) => {
   if (pets.length === 0) {
     petsCardContainer.classList.remove("grid");
     petsCardContainer.innerHTML = `
-        <div class="text-center p-8 border-2 border-solid rounded-xl w-full h-full flex flex-col justify-center items-center bg-gray-100">
+        <div class="text-center py-16 p-8 border-2 border-solid rounded-xl w-full h-full flex flex-col justify-center items-center bg-gray-100">
             <div class="flex justify-center items-center">
                 <img class="rounded-xl w-full h-full py-8" src="./images/error.webp" alt="Error Image">
             </div>
             <h2 class="font-extrabold text-4xl mb-4">No Information Available</h2>
-            <p class="mb-16 text-center font-semibold text-tertiaryTextColor">Currently, there is no information available in the Bird category. We are working to update our listings and provide you with the latest details. Please check back soon for new additions and updates!</p>
+            <p class="mb-16 mx-16 text-center font-semibold text-textColor">Currently, there is no information available in the Bird category. We are working to update our listings and provide you with the latest details. Please check back soon for new additions and updates!</p>
         </div>
         `;
     return;
